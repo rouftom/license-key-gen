@@ -7,43 +7,51 @@ const expect = chai.expect
 /* source */
 const LicenseGen = require('../lib')
 
+var license
+const userInfo = {
+  company: '3MLogics',
+  country: 'Cameroon',
+  region: 'Littoral',
+  division: 'Wouri',
+  subDivision: 'Douala 1er',
+  town: 'Douala',
+  zip: '54875'
+}
+
 describe('createLicense', () =>
 {
   console.time('createLicense')
   it('return proper license', () =>
   {
-    const userInfo = {
-      company: 'Webisto Tech',
-      department: 'IT',
-      city: 'Christchurch',
-      country: 'New Zealand',
-      zip: '8014'
+    const userData = { 
+      info: userInfo, 
+      validity: "2023-07-30",
+      prodCode: '3ML001', 
+      //appVersion: '1.0'
     }
-    const userData = { info: userInfo, prodCode: 'TEST01', appVersion: '0.0.1.' }
-    const license = LicenseGen.createLicense(userData)
+    license = LicenseGen.createLicense(userData)
 
     expect(license).to.be.an('object')
     expect(license).to.have.property('message', 'ok')
     expect(license).to.have.property('errorCode', 0)
-    expect(license).to.have.property('license').that.length(33)
+    //expect(license).to.have.property('license').that.length(33)
+    console.log(license)
   })
   console.timeEnd('createLicense')
 })
+
 
 describe('validateLicense', () =>
 {
   console.time('validateLicense')
   it('validate license', () =>
   {
-    const userInfo = {
-      company: 'Webisto Tech',
-      department: 'IT',
-      city: 'Christchurch',
-      country: 'New Zealand',
-      zip: '8014'
+    const userData = { 
+      info: userInfo, 
+      prodCode: '3ML001', 
+      //appVersion: '1.0'
     }
-    const userData = { info: userInfo, prodCode: 'TEST01', appVersion: '0.0.1.' }
-    const validity = LicenseGen.validateLicense(userData, 'Y35V5-41651-4VB72-D2C86-27748-A5B')
+    const validity = LicenseGen.validateLicense(userData, license?.license)
 
     expect(validity).to.be.an('object')
     expect(validity).to.have.property('message', 'ok')

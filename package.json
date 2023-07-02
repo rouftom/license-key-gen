@@ -1,13 +1,13 @@
 {
-  "name": "license-key-gen",
+  "name": "license-keygen-next",
   "version": "0.1.4",
-  "description": "Generates and Validates license",
-  "author": "Aruna Lakmal <contact@webisto.tech> (https://www.webisto.tech)",
+  "description": "A fork of node license-key-gen librairy that generates and validates license",
+  "author": "Roufaou Muller <rouftomb@gmail.com>",
   "license": "MIT",
   "main": "index.js",
   "bugs": {
-    "url": "https://github.com/arunahk/license-key-gen/issues",
-    "email": "contact@webisto.tech"
+    "url": "https://github.com/rouftom/license-keygen/issues",
+    "email": "rouftomb@gmail.com"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha",
@@ -24,9 +24,10 @@
   ],
   "dependencies": {
     "md5": "^2.2.1",
+    "moment": "^2.29.4",
     "uid-safe": "^2.1.5"
   },
-  "repository": "github:arunahk/license-key-gen",
+  "repository": "github:rouftom/license-keygen-next",
   "devDependencies": {
     "chai": "^4.2.0",
     "eslint": "^6.8.0",
