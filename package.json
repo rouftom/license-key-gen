@@ -1,12 +1,12 @@
 {
   "name": "license-keygen-next",
-  "version": "0.1.4",
-  "description": "A fork of node license-key-gen librairy that generates and validates license",
-  "author": "Roufaou Muller <rouftomb@gmail.com>",
+  "version": "0.1.5",
+  "description": "A fork of node license-key-gen library that generates and validates license",
+  "author": "Roufaou Muller <rouftomb@gmail.com>, Aruna Lakmal <contact@webisto.tech> (https://www.webisto.tech)",
   "license": "MIT",
   "main": "index.js",
   "bugs": {
-    "url": "https://github.com/rouftom/license-keygen/issues",
+    "url": "https://github.com/rouftom/license-keygen-next/issues",
     "email": "rouftomb@gmail.com"
   },
   "scripts": {

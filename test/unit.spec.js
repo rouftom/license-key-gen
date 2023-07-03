@@ -56,6 +56,7 @@ describe('validateLicense', () =>
     expect(validity).to.be.an('object')
     expect(validity).to.have.property('message', 'ok')
     expect(validity).to.have.property('errorCode', 0)
+    console.log(validity)
   })
   console.timeEnd('validateLicense')
 })
