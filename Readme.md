@@ -1,4 +1,13 @@
-[![Build Status](https://travis-ci.org/rouftom/license-keygen-next.svg?branch=main)](https://travis-ci.org/rouftom/license-keygen-next)
+<h1 style="text-align: center;">🔑 license-keygen-next</h1>
+
+<p style="text-align: center;">
+  <img alt="MIT license" src="https://img.shields.io/badge/license-MIT-blue.svg">
+  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/rouftom/license-keygen-next">
+  <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/rouftom/license-keygen-next">
+  <img alt="Snyk Vulnerabilities for GitHub Repo" src="https://img.shields.io/snyk/vulnerabilities/github/rouftom/license-keygen-next">
+</p>
+
+---
 
 # This project is a fork of [license-key-gen](https://www.webisto.tech)
 
@@ -6,7 +15,6 @@
 
 # license-keygen-next
 - Generate license keys for given company details
-- The [license-keygen-next](https://www.webisto.tech) library exported as [Node.js](https:nodejs.org/) modules.
 
 ## Source
 This project has been imported from [license-keygen-next](https://www.npmjs.com/package/license-keygen-next) in npm.org.
