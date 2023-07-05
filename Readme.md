@@ -3,8 +3,8 @@
 <p style="text-align: center;">
   <img alt="MIT license" src="https://img.shields.io/badge/license-MIT-blue.svg">
   <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/rouftom/license-keygen-next">
+  <img alt="npm" src="https://img.shields.io/npm/v/license-keygen-next"> 
   <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/rouftom/license-keygen-next">
-  <img alt="Snyk Vulnerabilities for GitHub Repo" src="https://img.shields.io/snyk/vulnerabilities/github/rouftom/license-keygen-next">
 </p>
 
 ---
@@ -48,7 +48,7 @@ Must include:
 3) userInfo.town (string) - entity town
 4) userInfo.zip (string) - entity zip
 5) userInfo.address (string) - entity address
-   
+
 
 6) ProductCode (string) - product abbr name, can be any size
 6) AppVersion (string) - optional if you want to tie the license to a version number
@@ -59,7 +59,7 @@ Must include:
    Apple Mobile: IOS, IOS5, IOS6, IOS7, IOS8, IOS9,IOS10
    Google Mobile: ANDROID, ANDROID2, ANDROID3, ANDROID4, ANDROID43, ANDROID44, ANDROID5, ANDROID6, ANDROID7
    OTHER
-4) validity (string) - license expiration date   
+4) validity (string) - license expiration date
 
 ```
 var userLicense = {
