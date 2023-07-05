@@ -9,13 +9,12 @@ const LicenseGen = require('../lib')
 
 var license
 const userInfo = {
-  company: '3MLogics',
+  name: '3MLogics',
   country: 'Cameroon',
-  region: 'Littoral',
-  division: 'Wouri',
-  subDivision: 'Douala 1er',
   town: 'Douala',
-  zip: '54875'
+  zip: '8388',
+  address: 'Akwa',
+  // other infos
 }
 
 describe('createLicense', () =>
@@ -25,9 +24,10 @@ describe('createLicense', () =>
   {
     const userData = { 
       info: userInfo, 
-      validity: "2023-07-30",
-      prodCode: '3ML001', 
-      //appVersion: '1.0'
+      validity: "2028-01-01",
+      prodCode: 'LEN100120',
+      appVersion: '1.5',
+      osType: 'IOS8'
     }
     license = LicenseGen.createLicense(userData)
 
@@ -48,15 +48,16 @@ describe('validateLicense', () =>
   {
     const userData = { 
       info: userInfo, 
-      prodCode: '3ML001', 
-      //appVersion: '1.0'
+      prodCode: 'LEN100120',
+      appVersion: '1.5',
+      osType: 'IOS8'
     }
     const validity = LicenseGen.validateLicense(userData, license?.license)
 
     expect(validity).to.be.an('object')
     expect(validity).to.have.property('message', 'ok')
     expect(validity).to.have.property('errorCode', 0)
-    console.log(validity)
+    //console.log(validity)
   })
   console.timeEnd('validateLicense')
 })

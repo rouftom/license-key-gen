@@ -26,19 +26,25 @@ To create a license key - Enter the users information that your are able to reci
 This object can be any data you wish to tie the license to - format Object
 ```
 var userInfo = {
-  company: '3MLogics',
+  name: '3MLogics',
   country: 'Cameroon',
-  region: 'Littoral',
-  division: 'Wouri',
-  subDivision: 'Douala 1er',
   town: 'Douala',
-  zip: '54875'
+  zip: '8388',
+  address: 'Akwa,
+  // other infos
 }
 ```
 Must include:
-1) ProductCode (string) - product abbr name, can be any size
-2) AppVersion (string) - optional if you want to tie the license to a version number
-3) osType (string) - lock the license to a specific operating system
+1) userInfo.name (string) - entity name
+2) userInfo.country (string) - entity country
+3) userInfo.town (string) - entity town
+4) userInfo.zip (string) - entity zip
+5) userInfo.address (string) - entity address
+   
+
+6) ProductCode (string) - product abbr name, can be any size
+6) AppVersion (string) - optional if you want to tie the license to a version number
+7) osType (string) - lock the license to a specific operating system
    supported:
    Windows: WIN, WIN7, WIN8,WIN10
    Macintosh: OSX, OSX1, OSX2, OSX3, OSX4, OSX5, OSX6, OSX7, OSX8, OSX9, OSX10, OSX11, OSX12
@@ -59,23 +65,22 @@ var userLicense = {
 
 ## Init
 ```
-var licenseKey = require('license-keygen-next');
+const licenseKey = require('license-keygen-next')
 ```
 
 ## Create a License Key
 Then run the following code to recieve the License for the client
 This function to be run ONLY for you to generate the license code for the client
 ```
-var licenseKey = require('license-keygen-next');
+const licenseKey = require('license-keygen-next')
 
 var userInfo = {
-  company: '3MLogics',
+  name: '3MLogics',
   country: 'Cameroon',
-  region: 'Littoral',
-  division: 'Wouri',
-  subDivision: 'Douala 1er',
   town: 'Douala',
-  zip: '54875'
+  zip: '8388',
+  address: 'Akwa',
+  // other infos
 }
 
 var licenseData = {
@@ -87,16 +92,16 @@ var licenseData = {
 }
 
 try{
-    var license = licenseKey.createLicense(licenseData)
-    console.log(license);
+    const license = licenseKey.createLicense(licenseData)
+    console.log(license)
 }catch(err){
-    console.log(err);
+    console.log(err)
 }
 ```
 
 if success returns
 ```
-{ errorCode: 0,  message: 'ok',  license: '671S20-0F10Y7-23T6Y3-CI4D30' }
+{ errorCode: 0,  message: 'ok',  license: 'ZY6W20-07YZ71-DJUIEN-20711X-I57F81' }
 ```
 
 if error, returns
@@ -106,17 +111,18 @@ if error, returns
 
 ## Validate a License Key
 On client side your application will pass the user information (Data Structure) and License Key:
+
+<b>⚠️ Specifying the validity of the license is no longer necessary during validation</b>
 ```
-var licenseKey = require('license-keygen-next');
+const licenseKey = require('license-keygen-next')
 
 var userInfo = {
-  company: '3MLogics',
+  name: '3MLogics',
   country: 'Cameroon',
-  region: 'Littoral',
-  division: 'Wouri',
-  subDivision: 'Douala 1er',
   town: 'Douala',
-  zip: '54875'
+  zip: '8388',
+  address: 'Akwa',
+  // other infos
 }
 
 var licenseData = {
@@ -127,13 +133,12 @@ var licenseData = {
 }
 
 try{
-    var license = 
-      licenseKey
-      .validateLicense(licenseData, "671S20-0F10Y7-23T6Y3-CI4D30");
-      
-    console.log(license);
+
+    const license = licenseKey.validateLicense(licenseData, "ZY6W20-07YZ71-DJUIEN-20711X-I57F81")
+    console.log(license)
+    
 }catch(err){
-    console.log(err);
+    console.log(err)
 }
 ```
 if success returns
