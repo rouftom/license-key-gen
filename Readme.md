@@ -37,7 +37,7 @@ var userInfo = {
   name: '3MLogics',
   country: 'Cameroon',
   town: 'Douala',
-  zip: '8388',
+  poBox: '8388',
   address: 'Akwa,
   // other infos
 }
@@ -86,7 +86,7 @@ var userInfo = {
   name: '3MLogics',
   country: 'Cameroon',
   town: 'Douala',
-  zip: '8388',
+  poBox: '8388',
   address: 'Akwa',
   // other infos
 }
@@ -109,7 +109,7 @@ try{
 
 if success returns
 ```
-{ errorCode: 0,  message: 'ok',  license: 'ZY6W20-07YZ71-DJUIEN-20711X-I57F81' }
+{ errorCode: 0,  message: 'ok',  license: '312220-0A0YW1-RBRCCX-20WDY4-XB1A71' }
 ```
 
 if error, returns
@@ -128,7 +128,7 @@ var userInfo = {
   name: '3MLogics',
   country: 'Cameroon',
   town: 'Douala',
-  zip: '8388',
+  poBox: '8388',
   address: 'Akwa',
   // other infos
 }
@@ -142,7 +142,7 @@ var licenseData = {
 
 try{
 
-    const license = licenseKey.validateLicense(licenseData, "ZY6W20-07YZ71-DJUIEN-20711X-I57F81")
+    const license = licenseKey.validateLicense(licenseData, "312220-0A0YW1-RBRCCX-20WDY4-XB1A71")
     console.log(license)
     
 }catch(err){
